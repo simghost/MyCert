@@ -40,7 +40,7 @@ namespace MyComparableClass
  
 
 
-    class Person : IComparable
+    class Person : IComparable, IDisposable
     {
         string _fName;
         string _lName;
@@ -74,6 +74,12 @@ namespace MyComparableClass
             }
 
             return Result;
+        }
+
+        public void Dispose()
+        {
+            
+            
         }
     }
 }
