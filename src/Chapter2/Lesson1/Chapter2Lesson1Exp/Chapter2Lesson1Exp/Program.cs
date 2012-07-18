@@ -49,6 +49,23 @@ namespace Chapter2Lesson1Exp
                 Console.WriteLine("Directory already exists.");
 
             Console.ReadLine();
+
+            Console.Clear();
+            Console.WriteLine("creating file");
+            FileInfo fInfo = new FileInfo(@"C:\deleteme\mynewfile.txt");
+            fInfo.CreateText();
+
+            Console.WriteLine("copy file");
+            fInfo.CopyTo(@"c:\deleteme\Mycopiedfile.txt");
+
+            Console.WriteLine("move file");
+            FileInfo fInfo2 = new FileInfo(@"C:\deleteme\MycopiedFile.txt");
+            fInfo2.MoveTo(@"c:\deleteme\mythirdfile.txt");
+
+    
+
+            Console.WriteLine("done");
+            Console.ReadLine();
         }
     }
 }
